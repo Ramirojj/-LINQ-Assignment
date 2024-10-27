@@ -13,6 +13,11 @@ characters.AddRange(marios);
 {
   Console.WriteLine(character.Display());
 }*/
+/*
 Console.Clear();
 // display first character
-Console.WriteLine(characters.First().Display());
+Console.WriteLine(characters.First().Display());*/
+foreach(Character character in characters.Take(5))
+{
+  Console.WriteLine(character.Display());
+}
