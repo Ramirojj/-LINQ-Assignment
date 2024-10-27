@@ -16,8 +16,14 @@ characters.AddRange(marios);
 /*
 Console.Clear();
 // display first character
-Console.WriteLine(characters.First().Display());*/
-foreach(Character character in characters.Take(5))
+Console.WriteLine(characters.First().Display());
+//
+*/
+/*foreach(Character character in characters.Take(5))
+{
+  Console.WriteLine(character.Display());
+}*/
+foreach(Character character in characters.Skip(5))
 {
   Console.WriteLine(character.Display());
 }
