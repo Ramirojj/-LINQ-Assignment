@@ -135,14 +135,21 @@ Console.WriteLine($"there are {characters1981Mario} characters created in 1981 i
 
 
 //[1.19d] List the character(s) created in that 1981 (Mario series) - return character name only. //
-int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
+/*int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
 foreach (var character in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")))
 {
     Console.WriteLine($"name : {character.Name}");
-}
+}*/
 //int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
 //Console.WriteLine($"there are {characters1981Mario} characters created in 1981 in the mario series");
 
 /*How many character(s) were created in 1981 (Donkey Kong series)?*/
-int characters1981Dk = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Donkey Kong"));
-Console.WriteLine($"there are {characters1981Dk} characters created in 1981 in the Donkey Kong series");
+/*int characters1981Dk = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Donkey Kong"));
+Console.WriteLine($"there are {characters1981Dk} characters created in 1981 in the Donkey Kong series");*/
+
+/* [1.19f] List the character(s) created in that 1981 (Donkey Kong series) - return character name only    */
+
+foreach (var character in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong")))
+{
+    Console.WriteLine($"name : {character.Name}");
+}
