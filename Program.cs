@@ -128,5 +128,17 @@ Console.WriteLine($"There are {character2000} character(s) created in 2000");*/
     Console.WriteLine($"name : {character.Name},   series names: {string.Join(",  ", character.Series)}");
 }*/
 ///[1.19c] How many character(s) were created in 1981 (Mario series)? ///
+/*
 int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
-Console.WriteLine($"there are {characters1981Mario} characters created in 1981 in the mario series");
+Console.WriteLine($"there are {characters1981Mario} characters created in 1981 in the mario series")
+;*/
+
+
+//[1.19d] List the character(s) created in that 1981 (Mario series) - return character name only. //
+int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
+foreach (var character in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")))
+{
+    Console.WriteLine($"name : {character.Name}");
+}
+//int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
+//Console.WriteLine($"there are {characters1981Mario} characters created in 1981 in the mario series");
