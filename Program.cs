@@ -185,10 +185,23 @@ foreach (var character in characters.Where(c => c.Alias.Count == 0))
 }*/
 /*[1.21d] Are there any character(s) with no alias (Mario series)? */
 
-
+/*
 bool Character1995 = characters.Any(c => c.YearCreated == 1995);
 Console.WriteLine($"Are there characters created in 1995: {Character1995}");
 
 bool alias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
 
-Console.WriteLine($"are characters with no alias in the Mario series: {alias}");
+Console.WriteLine($"are characters with no alias in the Mario series: {alias}");*/
+///How many character(s) with no alias (Mario series)?
+int alias = characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
+Console.WriteLine($"there are {alias} characters with no alias in the Mario series");
+
+
+
+
+/*
+ foreach (var character in characters.Where(c => c.Alias.Count == 0 && c.Series.Contains("Mario")))
+ {
+Console.WriteLine(character.Name);
+
+ }*/
