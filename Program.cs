@@ -154,5 +154,12 @@ Console.WriteLine($"there are {characters1981Dk} characters created in 1981 in t
     Console.WriteLine($"name : {character.Name}");
 }*/
 //How many character(s) made their first appearance in Donkey Kong 64?
-int charactersdk = characters.Count(c => c.FirstAppearance == "Donkey Kong 64");
-Console.WriteLine($"there are {charactersdk} characters made their first appearance in Donkey Kong 64");
+/*int charactersdk = characters.Count(c => c.FirstAppearance == "Donkey Kong 64");
+Console.WriteLine($"there are {charactersdk} characters made their first appearance in Donkey Kong 64");*/
+///[1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only
+///
+
+foreach (var character in characters.Where(c => c.FirstAppearance == "Donkey Kong 64"))
+{
+    Console.WriteLine($"name : {character.Name}");
+}
