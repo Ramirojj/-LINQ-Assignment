@@ -30,4 +30,6 @@ Console.WriteLine(characters.First().Display());
  //Console.WriteLine(characters.Last().Display());
 //}
 //Console.WriteLine(characters.Last().Display());
-Console.WriteLine(characters.Min(c => c.YearCreated));
+//Console.WriteLine(characters.Min(c => c.YearCreated));
+// oldest character
+Console.WriteLine(characters.First(c => c.YearCreated == characters.Min(c => c.YearCreated)).Display());
