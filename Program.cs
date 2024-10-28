@@ -142,3 +142,7 @@ foreach (var character in characters.Where(c => c.YearCreated == 1981 && c.Serie
 }
 //int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
 //Console.WriteLine($"there are {characters1981Mario} characters created in 1981 in the mario series");
+
+/*How many character(s) were created in 1981 (Donkey Kong series)?*/
+int characters1981Dk = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Donkey Kong"));
+Console.WriteLine($"there are {characters1981Dk} characters created in 1981 in the Donkey Kong series");
