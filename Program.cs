@@ -64,5 +64,8 @@ Console.WriteLine($"Are there characters created in 1995: {Character1995}");*/
   Console.WriteLine(characterDTO.Display());
 }*/
  //how many characters in total (all series)?
-int CharacterCount = characters.Count();
-Console.WriteLine($"There are {CharacterCount} characters in all series");
+/*int CharacterCount = characters.Count();
+Console.WriteLine($"There are {CharacterCount} characters in all series");*/
+// how many characters appear in the Mario series?
+int MarioCount = characters.Where(c => c.Series.Contains("Mario")).Count();
+Console.WriteLine($"There are {MarioCount} characters in the Mario series");
