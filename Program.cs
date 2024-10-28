@@ -149,7 +149,10 @@ Console.WriteLine($"there are {characters1981Dk} characters created in 1981 in t
 
 /* [1.19f] List the character(s) created in that 1981 (Donkey Kong series) - return character name only    */
 
-foreach (var character in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong")))
+/*foreach (var character in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong")))
 {
     Console.WriteLine($"name : {character.Name}");
-}
+}*/
+//How many character(s) made their first appearance in Donkey Kong 64?
+int charactersdk = characters.Count(c => c.FirstAppearance == "Donkey Kong 64");
+Console.WriteLine($"there are {charactersdk} characters made their first appearance in Donkey Kong 64");
