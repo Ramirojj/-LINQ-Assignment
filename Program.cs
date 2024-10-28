@@ -82,6 +82,13 @@ Console.WriteLine($"There are {DkNotMarioCount} characters that appear in Donkey
 /*foreach(var obj in characters.Where(c => c.Alias.Count() == characters.Max(c => c.Alias.Count())).Select(c => new {c.Name, c.Alias})){
   Console.WriteLine($"{obj.Name} has {obj.Alias.Count()} alias(s):\n\t{String.Join(", ", obj.Alias)}");
 }*/
-
+/*
+int LengthOfName = characters.Max(c => c.Name!.Length);
+Console.WriteLine($"There are {characters.Max(c => c.Name!.Length)} letters in the longest character's name");*/
 int LengthOfName = characters.Max(c => c.Name!.Length);
 Console.WriteLine($"There are {characters.Max(c => c.Name!.Length)} letters in the longest character's name");
+
+foreach(string? name in characters.Where(c => c.Name!.Length == LengthOfName).Select(c => c.Name))
+{
+  Console.WriteLine($"\t{name}");
+}
