@@ -156,10 +156,19 @@ Console.WriteLine($"there are {characters1981Dk} characters created in 1981 in t
 //How many character(s) made their first appearance in Donkey Kong 64?
 /*int charactersdk = characters.Count(c => c.FirstAppearance == "Donkey Kong 64");
 Console.WriteLine($"there are {charactersdk} characters made their first appearance in Donkey Kong 64");*/
-///[1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only
-///
 
+
+///[1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only
+/*
 foreach (var character in characters.Where(c => c.FirstAppearance == "Donkey Kong 64"))
 {
     Console.WriteLine($"name : {character.Name}");
-}
+}*/
+///[1.21a] Are there any character(s) with no alias (all series)?
+///
+
+bool Character1995 = characters.Any(c => c.YearCreated == 1995);
+Console.WriteLine($"Are there characters created in 1995: {Character1995}");
+
+bool Alias = characters.Any(c => c.Alias.Count == 0); 
+Console.WriteLine($"Are there any characters with no alias: {Alias}");
