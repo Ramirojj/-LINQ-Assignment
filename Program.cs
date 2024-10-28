@@ -167,8 +167,13 @@ foreach (var character in characters.Where(c => c.FirstAppearance == "Donkey Kon
 ///[1.21a] Are there any character(s) with no alias (all series)?
 ///
 
-bool Character1995 = characters.Any(c => c.YearCreated == 1995);
+/*bool Character1995 = characters.Any(c => c.YearCreated == 1995);
 Console.WriteLine($"Are there characters created in 1995: {Character1995}");
-
 bool Alias = characters.Any(c => c.Alias.Count == 0); 
-Console.WriteLine($"Are there any characters with no alias: {Alias}");
+Console.WriteLine($"Are there any characters with no alias: {Alias}");*/
+/*   [1.21b] How many character(s) with no alias (all series)?*/
+
+int alias = characters.Count(c => c.Alias.Count == 0);
+Console.WriteLine($"there are {alias} characters with no alias");
+
+
