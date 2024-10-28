@@ -177,9 +177,18 @@ int alias = characters.Count(c => c.Alias.Count == 0);
 Console.WriteLine($"there are {alias} characters with no alias");*/
 
 ///[1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
-
+/*
 
 foreach (var character in characters.Where(c => c.Alias.Count == 0))
 {
     Console.WriteLine($"name : {character.Name}, alias: {string.Join(",  ", character.Alias)}, series names: {string.Join(",  ", character.Series)}");
-}
+}*/
+/*[1.21d] Are there any character(s) with no alias (Mario series)? */
+
+
+bool Character1995 = characters.Any(c => c.YearCreated == 1995);
+Console.WriteLine($"Are there characters created in 1995: {Character1995}");
+
+bool alias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
+
+Console.WriteLine($"are characters with no alias in the Mario series: {alias}");
