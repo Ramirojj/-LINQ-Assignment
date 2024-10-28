@@ -123,7 +123,10 @@ int character2000 = characters.Count(c => c.YearCreated == 2000);
 Console.WriteLine($"There are {character2000} character(s) created in 2000");*/
 
 /*  List the character(s) created in that 1981 (all series) - return character name and series only */
-foreach (var character in characters.Where(c => c.YearCreated == 1981))
+/*foreach (var character in characters.Where(c => c.YearCreated == 1981))
 {
     Console.WriteLine($"name : {character.Name},   series names: {string.Join(",  ", character.Series)}");
-}
+}*/
+///[1.19c] How many character(s) were created in 1981 (Mario series)? ///
+int characters1981Mario = characters.Count(c => c.YearCreated ==1981 && c.Series.Contains("Mario"));
+Console.WriteLine($"there are {characters1981Mario} characters created in 1981 in the mario series");
