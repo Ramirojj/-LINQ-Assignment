@@ -13,9 +13,13 @@ characters.AddRange(marios);
 {
   Console.WriteLine(character.Display());
 }*/
+
 /*
 Console.Clear();
 // display first character
+
+
+
 Console.WriteLine(characters.First().Display());
 //
 */
@@ -93,6 +97,7 @@ foreach(string? name in characters.Where(c => c.Name!.Length == LengthOfName).Se
   Console.WriteLine($"\t{name}");
 
 }*/
+/*
 var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
 foreach(var characterByYearCreated in CharactersByYearCreated)
 {
@@ -100,4 +105,19 @@ foreach(var characterByYearCreated in CharactersByYearCreated)
   foreach(var character in characterByYearCreated) {
     Console.WriteLine($"\t{character.Name}");
   }
-}
+}*/
+
+////1.19a] How many character(s) were created in 1981 (all series)?
+/*int CharacterCount = characters.Count();
+Console.WriteLine($"There are {CharacterCount} characters in all series");
+*/
+
+
+///How many character(s) were created in 1981 (all series)?////
+//1.19a] How many character(s) were created in 1981 (all series)?
+int characters1981 = characters.Count(c => c.YearCreated == 1981);
+Console.WriteLine($"There are {characters1981} character(s) created in 1981");
+/*int characters1990 = characters.Count(c => c.YearCreated == 1990);
+Console.WriteLine($"There are {characters1990} character(s) created in 1990");
+int character2000 = characters.Count(c => c.YearCreated == 2000);
+Console.WriteLine($"There are {character2000} character(s) created in 2000");*/
