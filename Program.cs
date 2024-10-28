@@ -24,8 +24,10 @@ Console.WriteLine(characters.First().Display());
   Console.WriteLine(character.Display());
 }*/
 /*foreach(Character character in characters.Skip(5))*/
-foreach(Character character in characters.Skip(5).Take(5))
-{
+//foreach(Character character in characters.Skip(5).Take(5))
+//{
  /* Console.WriteLine(character.Display());*/
- Console.WriteLine(characters.Last().Display());
-}
+ //Console.WriteLine(characters.Last().Display());
+//}
+//Console.WriteLine(characters.Last().Display());
+Console.WriteLine(characters.Min(c => c.YearCreated));
