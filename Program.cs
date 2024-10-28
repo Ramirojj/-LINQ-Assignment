@@ -118,6 +118,6 @@ Console.WriteLine($"There are {CharacterCount} characters in all series");
 int characters1981 = characters.Count(c => c.YearCreated == 1981);
 Console.WriteLine($"There are {characters1981} character(s) created in 1981");
 /*int characters1990 = characters.Count(c => c.YearCreated == 1990);
-Console.WriteLine($"There are {characters1990} character(s) created in 1990");
+Console.Wr.iteLine($"There are {characters1990} character(s) created in 1990");
 int character2000 = characters.Count(c => c.YearCreated == 2000);
 Console.WriteLine($"There are {character2000} character(s) created in 2000");*/
