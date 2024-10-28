@@ -76,5 +76,9 @@ Console.WriteLine($"There are {DkCount} characters in the Donkey Kong series");*
 
 //int DkCount = characters.Where(c => c.Series.Contains("Donkey Kong")).Count();
 //Console.WriteLine($"There are {DkCount} characters in the Donkey Kong series");
-int DkNotMarioCount = characters.Where(c => c.Series.Contains("Donkey Kong") && !c.Series.Contains("Mario")).Count();
-Console.WriteLine($"There are {DkNotMarioCount} characters that appear in Donkey Kong and Not in Mario series");
+/*int DkNotMarioCount = characters.Where(c => c.Series.Contains("Donkey Kong") && !c.Series.Contains("Mario")).Count();
+Console.WriteLine($"There are {DkNotMarioCount} characters that appear in Donkey Kong and Not in Mario series");*/
+
+foreach(var obj in characters.Where(c => c.Alias.Count() == characters.Max(c => c.Alias.Count())).Select(c => new {c.Name, c.Alias})){
+  Console.WriteLine($"{obj.Name} has {obj.Alias.Count()} alias(s):\n\t{String.Join(", ", obj.Alias)}");
+}
