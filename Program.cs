@@ -67,5 +67,14 @@ Console.WriteLine($"Are there characters created in 1995: {Character1995}");*/
 /*int CharacterCount = characters.Count();
 Console.WriteLine($"There are {CharacterCount} characters in all series");*/
 // how many characters appear in the Mario series?
-int MarioCount = characters.Where(c => c.Series.Contains("Mario")).Count();
-Console.WriteLine($"There are {MarioCount} characters in the Mario series");
+/*int MarioCount = characters.Where(c => c.Series.Contains("Mario")).Count();
+Console.WriteLine($"There are {MarioCount} characters in the Mario series");*/
+//how many characters appear in the Donkey Kong series?
+/*nt DkCount = characters.Where(c => c.Series.Contains("Donkey Kong")).Count();
+Console.WriteLine($"There are {DkCount} characters in the Donkey Kong series");*/
+// how many characters appear in the Donkey Kong series?
+
+//int DkCount = characters.Where(c => c.Series.Contains("Donkey Kong")).Count();
+//Console.WriteLine($"There are {DkCount} characters in the Donkey Kong series");
+int DkNotMarioCount = characters.Where(c => c.Series.Contains("Donkey Kong") && !c.Series.Contains("Mario")).Count();
+Console.WriteLine($"There are {DkNotMarioCount} characters that appear in Donkey Kong and Not in Mario series");
