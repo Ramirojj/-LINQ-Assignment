@@ -260,5 +260,9 @@ Console.WriteLine($"are characters with no alias in the Donkey Kong series: {ali
 //{Console.WriteLine($"name:{character.Name}");}
 
 ///[1.25a] How many character(s) in the Mario series are Human species?
-int species = characters.Count(c => c.Species == "Human" && c.Series.Contains("Mario"));
-Console.WriteLine($"there are {species} characters in the Mario series with a species ofHuman");
+//int species = characters.Count(c => c.Species == "Human" && c.Series.Contains("Mario"));
+//Console.WriteLine($"there are {species} characters in the Mario series with a species ofHuman");
+
+///[1.25b] List the character(s) in the Mario series that are Human species - return character name only.
+foreach (var character in characters.Where(c => c.Species == "Human" && c.Series.Contains("Mario")))
+{Console.WriteLine($"name:{character.Name}");}
