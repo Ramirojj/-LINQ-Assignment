@@ -230,8 +230,13 @@ Console.WriteLine($"are characters with no alias in the Donkey Kong series: {ali
 
 
 ///[1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only
-foreach (var character in characters.Where(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong")))
-{
-    Console.WriteLine($"name:{character.Name}, alias: {string.Join(", ", character.Alias)}");}
+//foreach (var character in characters.Where(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong")))
+//{
+  ///  Console.WriteLine($"name:{character.Name}, alias: {string.Join(", ", character.Alias)}");}
+  ///  
+
+  ///[1.22a] Do any character(s) have an alias of Snowmad King (return type must be boolean)?
+    bool aliasSnow = characters.Any(c => c.Alias.Contains("Snowmad King"));
+    Console.WriteLine($"are there any characters with an alias of Snowmad King: {aliasSnow}");
 
 
