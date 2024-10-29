@@ -278,5 +278,10 @@ Console.WriteLine($"are characters with no alias in the Donkey Kong series: {ali
 ////Console.WriteLine($"there are {species} characters in the Mario series with a species other than Human or Koopa");
 ///
 /// [1.25f] List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
-foreach (var character in characters.Where(c => c.Species != "Human" && c.Species != "Koopa" && c.Series.Contains("Mario")))
+/*foreach (var character in characters.Where(c => c.Species != "Human" && c.Species != "Koopa" && c.Series.Contains("Mario")))
+{Console.WriteLine($"name:{character.Name}, species: {character.Species}");}*/
+
+
+//[1.26] List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only
+foreach (var character in characters.Where(c => c.Species != "Human" && c.Species != "Kong" && c.Series.Contains("Donkey Kong"))) 
 {Console.WriteLine($"name:{character.Name}, species: {character.Species}");}
