@@ -249,5 +249,9 @@ Console.WriteLine($"are characters with no alias in the Donkey Kong series: {ali
  //Console.WriteLine($"are there any characters with an alias of Winter Kong: {aliasW}");
 
  ///[1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only
- foreach (var character in characters.Where(c => c.Alias.Contains("Winter Kong")))
-{ Console.WriteLine($"name:{character.Name}, alias: {string.Join(", ", character.Alias)}");}
+ //foreach (var character in characters.Where(c => c.Alias.Contains("Winter Kong")))
+//{Console.WriteLine($"name:{character.Name}, alias: {string.Join(", ", character.Alias)}");}
+
+///How many character(s) have a species of Kremling?
+int species = characters.Count(c => c.Species == "Kremling");
+Console.WriteLine($"there are {species} characters with a species of Kremling");
