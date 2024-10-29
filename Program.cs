@@ -225,8 +225,13 @@ Console.WriteLine($"are characters with no alias in the Donkey Kong series: {ali
 //[1.21h] How many character(s) with no alias (Donkey Kong series)?  
 
 
-int alias = characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
-Console.WriteLine($"there are {alias} characters with no alias in the Donkey Kong series");
+//int alias = characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
+//Console.WriteLine($"there are {alias} characters with no alias in the Donkey Kong series");
 
+
+///[1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only
+foreach (var character in characters.Where(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong")))
+{
+    Console.WriteLine($"name:{character.Name}, alias: {string.Join(", ", character.Alias)}");}
 
 
