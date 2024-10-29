@@ -214,13 +214,19 @@ Console.WriteLine($"there are {alias} characters with no alias in the Mario seri
 
 bool alias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
 
-Console.WriteLine($"are characters with no alias in the Mario series: {alias}");
-*/
+Console.WriteLine($"are characters with no alias in the Mario series: {alias}");*/
+
 
 /////[1.21g] Are there any character(s) with no alias (Donkey Kong series)?
        
-bool alias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
-Console.WriteLine($"are characters with no alias in the Donkey Kong series: {alias}");
+/*bool alias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
+Console.WriteLine($"are characters with no alias in the Donkey Kong series: {alias}");*/
+
+//[1.21h] How many character(s) with no alias (Donkey Kong series)?  
+
+
+int alias = characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
+Console.WriteLine($"there are {alias} characters with no alias in the Donkey Kong series");
 
 
 
