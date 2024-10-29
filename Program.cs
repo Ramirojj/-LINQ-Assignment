@@ -253,5 +253,8 @@ Console.WriteLine($"are characters with no alias in the Donkey Kong series: {ali
 //{Console.WriteLine($"name:{character.Name}, alias: {string.Join(", ", character.Alias)}");}
 
 ///How many character(s) have a species of Kremling?
-int species = characters.Count(c => c.Species == "Kremling");
-Console.WriteLine($"there are {species} characters with a species of Kremling");
+//int species = characters.Count(c => c.Species == "Kremling");
+//Console.WriteLine($"there are {species} characters with a species of Kremling");
+//[1.24b] List the character(s) that have a species of Kremling - return character name only.
+foreach (var character in characters.Where(c => c.Species == "Kremling"))
+{Console.WriteLine($"name:{character.Name}");}
